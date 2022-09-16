@@ -9,9 +9,11 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import br.com.exactaworks.gestaodespesas.pessoa.application.api.pessoaRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -44,4 +46,14 @@ public class Pessoa {
 	
 	private LocalDateTime dataHoraDaCadastro;
 	private LocalDateTime dataHoraDoUltimaAlteracao;
+	
+	public Pessoa(@Valid pessoaRequest pessoaRequest) {
+		this.nomePessoa = pessoaRequest.getNomePessoa();
+		this.cpf = pessoaRequest.getCpf();
+		this.idade = pessoaRequest.getIdade();
+		this.sexo = pessoaRequest.getSexo();
+		this.telefone = pessoaRequest.getTelefone();
+		this.email = pessoaRequest.getEmail();
+		this.dataHoraDaCadastro = LocalDateTime.now();
+	}
 }
