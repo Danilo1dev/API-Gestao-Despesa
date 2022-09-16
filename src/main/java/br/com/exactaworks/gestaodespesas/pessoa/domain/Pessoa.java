@@ -1,6 +1,5 @@
 package br.com.exactaworks.gestaodespesas.pessoa.domain;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 import javax.persistence.Column;
@@ -12,7 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -43,9 +41,7 @@ public class Pessoa {
 	private String telefone;
 	@Email
 	private String email;
-	@NotNull
-	private LocalDate dataDoCadastro;
-
+	
 	private LocalDateTime dataHoraDaCadastro;
 	private LocalDateTime dataHoraDoUltimaAlteracao;
 }
