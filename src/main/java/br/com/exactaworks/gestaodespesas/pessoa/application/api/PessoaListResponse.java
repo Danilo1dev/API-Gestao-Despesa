@@ -14,6 +14,7 @@ public class PessoaListResponse {
 	private Sexo sexo;
 	private String telefone;
 	private String email;
+	private double renda;
 
 	public static List<PessoaListResponse> converte(List<Pessoa> pessoas) {
 		return pessoas.stream()
@@ -28,5 +29,6 @@ public class PessoaListResponse {
 		this.sexo = pessoa.getSexo();
 		this.telefone = pessoa.getTelefone();
 		this.email = pessoa.getEmail();
+		this.renda = pessoa.getRenda();
 	}
 }

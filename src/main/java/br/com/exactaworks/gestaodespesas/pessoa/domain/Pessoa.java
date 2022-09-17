@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.PessoaAlteracaoRequest;
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.pessoaRequest;
@@ -44,6 +45,8 @@ public class Pessoa {
 	private String telefone;
 	@Email
 	private String email;
+	@NotNull
+	private double renda;
 	
 	private LocalDateTime dataHoraDaCadastro;
 	private LocalDateTime dataHoraDoUltimaAlteracao;
@@ -55,6 +58,7 @@ public class Pessoa {
 		this.sexo = pessoaRequest.getSexo();
 		this.telefone = pessoaRequest.getTelefone();
 		this.email = pessoaRequest.getEmail();
+		this.renda = pessoaRequest.getRenda();
 		this.dataHoraDaCadastro = LocalDateTime.now();
 	}
 
@@ -65,6 +69,7 @@ public class Pessoa {
 		this.sexo = pessoaAlteracaoRequest.getSexo();
 		this.telefone = pessoaAlteracaoRequest.getTelefone();
 		this.email = pessoaAlteracaoRequest.getEmail();
+		this.renda = pessoaAlteracaoRequest.getRenda();
 		this.dataHoraDoUltimaAlteracao = LocalDateTime.now();
 	}
 }

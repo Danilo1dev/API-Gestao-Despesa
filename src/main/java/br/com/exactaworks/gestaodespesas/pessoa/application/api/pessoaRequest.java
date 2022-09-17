@@ -2,6 +2,7 @@ package br.com.exactaworks.gestaodespesas.pessoa.application.api;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import br.com.exactaworks.gestaodespesas.pessoa.domain.Sexo;
 import lombok.Value;
 
@@ -19,4 +20,6 @@ public class pessoaRequest {
 	private String telefone;
 	@Email
 	private String email;
+	@NotNull
+	private double renda;
 }

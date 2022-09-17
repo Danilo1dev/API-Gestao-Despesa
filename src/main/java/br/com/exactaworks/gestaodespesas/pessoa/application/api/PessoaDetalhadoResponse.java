@@ -12,6 +12,7 @@ public class PessoaDetalhadoResponse {
 	private Sexo sexo;
 	private String telefone;
 	private String email;
+	private double renda;
 
 	public PessoaDetalhadoResponse(Pessoa pessoa) {
 		this.nomePessoa = pessoa.getNomePessoa();
@@ -20,5 +21,6 @@ public class PessoaDetalhadoResponse {
 		this.sexo = pessoa.getSexo();
 		this.telefone = pessoa.getTelefone();
 		this.email = pessoa.getEmail();
+		this.renda = pessoa.getRenda();
 	}	
 }
