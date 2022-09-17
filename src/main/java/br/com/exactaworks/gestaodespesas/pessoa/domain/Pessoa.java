@@ -13,6 +13,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import br.com.exactaworks.gestaodespesas.pessoa.application.api.PessoaAlteracaoRequest;
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.pessoaRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -55,5 +56,15 @@ public class Pessoa {
 		this.telefone = pessoaRequest.getTelefone();
 		this.email = pessoaRequest.getEmail();
 		this.dataHoraDaCadastro = LocalDateTime.now();
+	}
+
+	public void altera(@Valid PessoaAlteracaoRequest pessoaAlteracaoRequest) {
+		this.nomePessoa = pessoaAlteracaoRequest.getNomePessoa();
+		this.cpf = pessoaAlteracaoRequest.getCpf();
+		this.idade = pessoaAlteracaoRequest.getIdade();
+		this.sexo = pessoaAlteracaoRequest.getSexo();
+		this.telefone = pessoaAlteracaoRequest.getTelefone();
+		this.email = pessoaAlteracaoRequest.getEmail();
+		this.dataHoraDoUltimaAlteracao = LocalDateTime.now();
 	}
 }

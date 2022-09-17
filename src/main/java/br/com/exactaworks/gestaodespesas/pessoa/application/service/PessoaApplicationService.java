@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.UUID;
 import javax.validation.Valid;
 import org.springframework.stereotype.Service;
-
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.PessoaAlteracaoRequest;
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.PessoaDetalhadoResponse;
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.PessoaListResponse;
@@ -58,6 +57,9 @@ public class PessoaApplicationService implements PessoaService{
 	@Override
 	public void patchAlteraPessoa(UUID idPessoa, @Valid PessoaAlteracaoRequest pessoaAlteracaoRequest) {
 		log.info("[inicia] PessoaApplicationService - patchAlteraPessoa");
+		Pessoa pessoa = pessoaRepository.buscaPessoaAtravesId(idPessoa);
+		pessoa.altera(pessoaAlteracaoRequest);
+		pessoaRepository.salva(pessoa);
 		log.info("[finaliza] PessoaApplicationService - patchAlteraPessoa");
 	}
 }
