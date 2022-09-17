@@ -38,4 +38,10 @@ public class PessoaInfraRepository implements PessoaRepository {
 		log.info("[finaliza]PessoaInfraRepository - buscaTodasPessoas");
 		return pessoa;
 	}
+
+	@Override
+	public void deletaPessoa(Pessoa pessoa) {
+		log.info("[inicia]PessoaInfraRepository - deletaPessoa");
+		log.info("[finaliza]PessoaInfraRepository - deletaPessoa");
+	}
 }
