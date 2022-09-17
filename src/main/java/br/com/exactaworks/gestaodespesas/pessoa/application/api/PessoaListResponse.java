@@ -16,7 +16,17 @@ public class PessoaListResponse {
 	private String email;
 
 	public static List<PessoaListResponse> converte(List<Pessoa> pessoas) {
-		return null;
-		
+		return pessoas.stream()
+				.map(PessoaListResponse::new)
+				.collect(Collectors.toList());
+	}
+
+	public PessoaListResponse(Pessoa pessoa) {
+		this.nomePessoa = pessoa.getNomePessoa();
+		this.cpf = pessoa.getCpf();
+		this.idade = pessoa.getIdade();
+		this.sexo = pessoa.getSexo();
+		this.telefone = pessoa.getTelefone();
+		this.email = pessoa.getEmail();
 	}
 }
