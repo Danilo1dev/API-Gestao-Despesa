@@ -1,6 +1,7 @@
 package br.com.exactaworks.gestaodespesas.pessoa.infra;
 
 import java.util.List;
+import java.util.UUID;
 import org.springframework.stereotype.Repository;
 import br.com.exactaworks.gestaodespesas.pessoa.application.repository.PessoaRepository;
 import br.com.exactaworks.gestaodespesas.pessoa.domain.Pessoa;
@@ -27,5 +28,12 @@ public class PessoaInfraRepository implements PessoaRepository {
 		List<Pessoa> todasPessoas = pessoaSpringDataJPARepository.findAll();
 		log.info("[finaliza]PessoaInfraRepository - buscaTodasPessoas");
 		return todasPessoas;
+	}
+
+	@Override
+	public Pessoa buscaPessoaAtravesId(UUID idPessoa) {
+		log.info("[inicia]PessoaInfraRepository - buscaTodasPessoas");
+		log.info("[finaliza]PessoaInfraRepository - buscaTodasPessoas");
+		return null;
 	}
 }
