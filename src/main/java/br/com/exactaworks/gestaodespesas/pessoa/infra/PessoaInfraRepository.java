@@ -33,7 +33,9 @@ public class PessoaInfraRepository implements PessoaRepository {
 	@Override
 	public Pessoa buscaPessoaAtravesId(UUID idPessoa) {
 		log.info("[inicia]PessoaInfraRepository - buscaTodasPessoas");
+		Pessoa pessoa = pessoaSpringDataJPARepository.findById(idPessoa)
+				.orElseThrow(() -> new RuntimeException("Pessoa não encontrada!"));
 		log.info("[finaliza]PessoaInfraRepository - buscaTodasPessoas");
-		return null;
+		return pessoa;
 	}
 }
