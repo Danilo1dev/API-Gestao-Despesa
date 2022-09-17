@@ -1,7 +1,9 @@
 package br.com.exactaworks.gestaodespesas.pessoa.application.service;
 
+import java.util.List;
 import javax.validation.Valid;
 import org.springframework.stereotype.Service;
+import br.com.exactaworks.gestaodespesas.pessoa.application.api.PessoaListResponse;
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.PessoaResponse;
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.pessoaRequest;
 import br.com.exactaworks.gestaodespesas.pessoa.application.repository.PessoaRepository;
@@ -23,5 +25,13 @@ public class PessoaApplicationService implements PessoaService{
 		return PessoaResponse.builder()
 				.idPessoa(pessoa.getIdPessoa())
 				.build();
+	}
+
+	@Override
+	public List<PessoaListResponse> buscaTodasPessoas() {
+		log.info("[inicia] PessoaApplicationService - buscaTodasPessoas");
+		List<Pessoa> pessoas = pessoaRepository.buscaTodasPessoas();
+		log.info("[finaliza] PessoaApplicationService - buscaTodasPessoas");
+		return PessoaListResponse.converte(pessoas);
 	}
 }
