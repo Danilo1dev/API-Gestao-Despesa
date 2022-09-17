@@ -1,11 +1,9 @@
 package br.com.exactaworks.gestaodespesas.pessoa.application.api;
 
 import java.util.List;
-
+import java.util.UUID;
 import javax.validation.Valid;
-
 import org.springframework.web.bind.annotation.RestController;
-
 import br.com.exactaworks.gestaodespesas.pessoa.application.service.PessoaService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -30,5 +28,13 @@ public class PessoaController implements PessoaAPI {
 		List<PessoaListResponse> pessoas = pessoaService.buscaTodasPessoas();
 		log.info("[finaliza] PessoaController - getTodasPessoas");
 		return pessoas;
+	}
+
+	@Override
+	public PessoaDetalhadoResponse getPessoaAtravesId(UUID idPessoa) {
+		log.info("[inicia] ClienteController - getPessoaAtravesId");
+		log.info("[idPessoa] {}", idPessoa);
+		log.info("[finaliza] ClienteController - getPessoaAtravesId");	
+		return null;
 	}
 }
