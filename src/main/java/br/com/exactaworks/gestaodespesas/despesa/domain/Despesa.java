@@ -10,9 +10,11 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import br.com.exactaworks.gestaodespesas.application.api.DespesaRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -42,4 +44,13 @@ public class Despesa {
 	
 	private LocalDateTime dataHoraDoCadastroDespesa;
 	private LocalDateTime dataHoraDoUltimaAlteracaoDespesa;
+
+	public Despesa(UUID idPessoa, @Valid DespesaRequest despesaRequest) {
+		this.idPessoaCadastrada = idPessoa;
+		this.descrição = despesaRequest.getDescrição();
+		this.valorDespesa = despesaRequest.getValorDespesa();
+		this.tipoDespesa = despesaRequest.getTipoDespesa();
+		this.dataDaDespesa = despesaRequest.getDataDaDespesa();
+		this.dataHoraDoCadastroDespesa = LocalDateTime.now();
+	}
 }
