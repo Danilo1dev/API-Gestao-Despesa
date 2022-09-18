@@ -1,4 +1,4 @@
-package br.com.exactaworks.gestaodespesas.application.repository;
+package br.com.exactaworks.gestaodespesas.despesa.application.repository;
 
 import br.com.exactaworks.gestaodespesas.despesa.domain.Despesa;
 

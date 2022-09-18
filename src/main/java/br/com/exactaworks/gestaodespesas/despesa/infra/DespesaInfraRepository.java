@@ -1,7 +1,8 @@
-package br.com.exactaworks.gestaodespesas.infra;
+package br.com.exactaworks.gestaodespesas.despesa.infra;
 
 import org.springframework.stereotype.Repository;
-import br.com.exactaworks.gestaodespesas.application.repository.DespesaRepository;
+
+import br.com.exactaworks.gestaodespesas.despesa.application.repository.DespesaRepository;
 import br.com.exactaworks.gestaodespesas.despesa.domain.Despesa;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

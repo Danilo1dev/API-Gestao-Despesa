@@ -1,4 +1,4 @@
-package br.com.exactaworks.gestaodespesas.application.api;
+package br.com.exactaworks.gestaodespesas.despesa.application.api;
 
 import java.util.UUID;
 import lombok.Value;

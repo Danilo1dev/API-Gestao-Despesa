@@ -1,9 +1,9 @@
-package br.com.exactaworks.gestaodespesas.application.api;
+package br.com.exactaworks.gestaodespesas.despesa.application.api;
 
 import java.util.UUID;
 import javax.validation.Valid;
 import org.springframework.web.bind.annotation.RestController;
-import br.com.exactaworks.gestaodespesas.application.service.DespesaService;
+import br.com.exactaworks.gestaodespesas.despesa.application.service.DespesaService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
