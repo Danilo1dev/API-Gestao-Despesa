@@ -14,6 +14,8 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaAlteracaoRequest;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -52,5 +54,13 @@ public class Despesa {
 		this.tipoDespesa = despesaRequest.getTipoDespesa();
 		this.dataDaDespesa = despesaRequest.getDataDaDespesa();
 		this.dataHoraDoCadastroDespesa = LocalDateTime.now();
+	}
+
+	public void altera(@Valid DespesaAlteracaoRequest despesaAlteracaoRequest) {
+		this.descricao = despesaAlteracaoRequest.getDescricao();
+		this.valorDespesa = despesaAlteracaoRequest.getValorDespesa();
+		this.tipoDespesa = despesaAlteracaoRequest.getTipoDespesa();
+		this.dataDaDespesa = despesaAlteracaoRequest.getDataDaDespesa();
+		this.dataHoraDoUltimaAlteracaoDespesa = LocalDateTime.now();
 	}
 }

@@ -64,6 +64,10 @@ public class DespesaApplicationService implements DespesaService {
 	public void alteraDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa,
 			@Valid DespesaAlteracaoRequest despesaAlteracaoRequest) {
 		log.info("[inicia] DespesaApplicationService - alteraDespesaDaPessoaComId");
+		pessoaService.buscaPessoaAtravesID(idPessoa);
+		Despesa despesa = despesaRepository.buscaDespesaPeloId(idDespesa);
+		despesa.altera(despesaAlteracaoRequest);
+		despesaRepository.salvaDespesa(despesa);
 		log.info("[finaliza] DespesaApplicationService - alteraDespesaDaPessoaComId");
 	}
 }
