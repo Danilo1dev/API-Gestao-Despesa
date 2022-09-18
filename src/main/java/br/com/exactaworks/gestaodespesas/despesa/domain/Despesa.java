@@ -34,7 +34,7 @@ public class Despesa {
 	@NotNull
 	@NotBlank(message = "Insira uma descrição")
 	@Size(max = 100)
-	private String descrição;
+	private String descricao;
 	@NotNull
 	private Double valorDespesa;
 	@Enumerated(EnumType.STRING)
@@ -47,7 +47,7 @@ public class Despesa {
 
 	public Despesa(UUID idPessoa, @Valid DespesaRequest despesaRequest) {
 		this.idPessoaCadastrada = idPessoa;
-		this.descrição = despesaRequest.getDescrição();
+		this.descricao = despesaRequest.getDescricao();
 		this.valorDespesa = despesaRequest.getValorDespesa();
 		this.tipoDespesa = despesaRequest.getTipoDespesa();
 		this.dataDaDespesa = despesaRequest.getDataDaDespesa();

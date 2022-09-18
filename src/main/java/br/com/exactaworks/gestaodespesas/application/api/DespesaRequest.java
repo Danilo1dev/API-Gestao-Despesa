@@ -12,7 +12,7 @@ public class DespesaRequest {
 	@NotNull
 	@NotBlank(message = "Insira uma descrição")
 	@Size(max = 100)
-	private String descrição;
+	private String descricao;
 	@NotNull
 	private Double valorDespesa;
 	private TipoDespesa tipoDespesa;
