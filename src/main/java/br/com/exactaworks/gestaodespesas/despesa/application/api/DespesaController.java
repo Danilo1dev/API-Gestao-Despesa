@@ -53,6 +53,7 @@ public class DespesaController implements DespesaAPI {
 	public void patchDespesa(UUID idPessoa, UUID idDespesa, @Valid DespesaAlteracaoRequest despesaAlteracaoRequest) {
 		log.info("[inicia] DespesaController - patchDespesa");
 		log.info("[idPessoa]{} - [idDespesa] {}",idPessoa, idDespesa);
+		despesaService.alteraDespesaDaPessoaComId(idPessoa, idDespesa, despesaAlteracaoRequest);
 		log.info("[finaliza] DespesaController - patchDespesa");
 	}
 }

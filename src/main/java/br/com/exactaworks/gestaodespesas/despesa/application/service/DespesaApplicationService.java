@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import org.springframework.stereotype.Service;
 
+import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaAlteracaoRequest;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaDaPessoaListResponse;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaDetalhadoResponse;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaRequest;
@@ -57,5 +58,12 @@ public class DespesaApplicationService implements DespesaService {
 		Despesa despesa = despesaRepository.buscaDespesaPeloId(idDespesa);
 		despesaRepository.deletaDespesaId(despesa);
 		log.info("[finaliza] DespesaApplicationService - deletaDespesaDaPessoaComId");
+	}
+
+	@Override
+	public void alteraDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa,
+			@Valid DespesaAlteracaoRequest despesaAlteracaoRequest) {
+		log.info("[inicia] DespesaApplicationService - alteraDespesaDaPessoaComId");
+		log.info("[finaliza] DespesaApplicationService - alteraDespesaDaPessoaComId");
 	}
 }

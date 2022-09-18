@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 import javax.validation.Valid;
 
+import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaAlteracaoRequest;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaDaPessoaListResponse;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaDetalhadoResponse;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaRequest;
@@ -14,4 +15,6 @@ public interface DespesaService {
 	List<DespesaDaPessoaListResponse> buscaDespesaDaPessoaComId(UUID idPessoa);
 	DespesaDetalhadoResponse buscaDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa);
 	void deletaDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa);
+	void alteraDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa,
+			@Valid DespesaAlteracaoRequest despesaAlteracaoRequest);
 }
