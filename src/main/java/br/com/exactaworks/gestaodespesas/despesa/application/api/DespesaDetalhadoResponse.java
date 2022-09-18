@@ -8,6 +8,7 @@ import lombok.Value;
 
 @Value
 public class DespesaDetalhadoResponse {
+	private UUID idPessoa;
 	private UUID idDespesa;
 	private String descricao;
 	private Double valorDespesa;
@@ -15,6 +16,7 @@ public class DespesaDetalhadoResponse {
 	private LocalDate dataDaDespesa;
 
 	public DespesaDetalhadoResponse(Despesa despesa) {
+		this.idPessoa = despesa.getIdPessoaCadastrada();
 		this.idDespesa = despesa.getIdDespesa();
 		this.descricao = despesa.getDescricao();
 		this.valorDespesa = despesa.getValorDespesa();
