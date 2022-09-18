@@ -31,4 +31,11 @@ public class DespesaInfraRepository implements DespesaRepository {
 		log.info("[inicia] DespesaInfraRepository - buscaDespesaDaPessoaComId");
 		return despesa;
 	}
+
+	@Override
+	public Despesa buscaDespesaPeloId(UUID idDespesa) {
+		log.info("[inicia] DespesaInfraRepository - buscaDespesaPeloId");
+		log.info("[inicia] DespesaInfraRepository - buscaDespesaPeloId");
+		return null;
+	}
 }

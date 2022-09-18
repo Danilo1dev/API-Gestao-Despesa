@@ -44,7 +44,9 @@ public class DespesaApplicationService implements DespesaService {
 	@Override
 	public DespesaDetalhadoResponse buscaDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa) {
 		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
+		pessoaService.buscaPessoaAtravesID(idPessoa);
+		Despesa despesa = despesaRepository.buscaDespesaPeloId(idDespesa);
 		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
-		return null;
+		return new DespesaDetalhadoResponse(despesa);
 	}
 }
