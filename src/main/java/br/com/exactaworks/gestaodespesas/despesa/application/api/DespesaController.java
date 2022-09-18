@@ -1,5 +1,6 @@
 package br.com.exactaworks.gestaodespesas.despesa.application.api;
 
+import java.util.List;
 import java.util.UUID;
 import javax.validation.Valid;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +21,14 @@ public class DespesaController implements DespesaAPI {
 		DespesaResponse despesa = despesaService.criaDespesa(idPessoa, despesaRequest);
 		log.info("[finaliza] DespesaController - postDespesa");
 		return despesa;
+	}
+
+	@Override
+	public List<DespesaDaPessoaListResponse> getDepesaDaPessoaComId(UUID idPessoa) {
+		log.info("[inicia] DespesaController - getDepesaDaPessoaComId");
+		log.info("[idPessoa]{}",idPessoa);
+		log.info("[finaliza] DespesaController - getDepesaDaPessoaComId");
+		return null;
 	}
 }
 
