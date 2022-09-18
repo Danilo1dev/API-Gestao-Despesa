@@ -27,7 +27,8 @@ public class DespesaInfraRepository implements DespesaRepository {
 	@Override
 	public List<Despesa> buscaDespesaDaPessoaComId(UUID idPessoa) {
 		log.info("[inicia] DespesaInfraRepository - buscaDespesaDaPessoaComId");
+		var despesa = despesaSpringDataJPARepository.findByIdPessoaCadastrada(idPessoa);
 		log.info("[inicia] DespesaInfraRepository - buscaDespesaDaPessoaComId");
-		return null;
+		return despesa;
 	}
 }
