@@ -8,6 +8,7 @@ import javax.validation.Valid;
 import org.springframework.stereotype.Service;
 
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaDaPessoaListResponse;
+import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaDetalhadoResponse;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaRequest;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaResponse;
 import br.com.exactaworks.gestaodespesas.despesa.application.repository.DespesaRepository;
@@ -38,5 +39,12 @@ public class DespesaApplicationService implements DespesaService {
 		List<Despesa> despesaDaPessoa = despesaRepository.buscaDespesaDaPessoaComId(idPessoa);
 		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
 		return DespesaDaPessoaListResponse.converte(despesaDaPessoa);
+	}
+
+	@Override
+	public DespesaDetalhadoResponse buscaDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa) {
+		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
+		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
+		return null;
 	}
 }
