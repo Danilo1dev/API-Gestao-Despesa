@@ -31,5 +31,13 @@ public class DespesaController implements DespesaAPI {
 		log.info("[finaliza] DespesaController - getDepesaDaPessoaComId");
 		return DespesaDaPessoa;
 	}
+
+	@Override
+	public DespesaDetalhadoResponse getDespesaAtravesId(UUID idPessoa, UUID idDespesa) {
+		log.info("[inicia] DespesaController - getDespesaAtravesId");
+		log.info("[idPessoa]{} - [idDespesa] {}",idPessoa, idDespesa);
+		log.info("[finaliza] DespesaController - getDespesaAtravesId");
+		return null;
+	}
 }
 

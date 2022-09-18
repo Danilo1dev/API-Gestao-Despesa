@@ -23,4 +23,10 @@ public interface DespesaAPI {
 	@GetMapping
 	@ResponseStatus(code = HttpStatus.OK)
 	List<DespesaDaPessoaListResponse> getDepesaDaPessoaComId(@PathVariable UUID idPessoa);
+	
+	@GetMapping(value = "/{idDespesa}")
+	@ResponseStatus(code = HttpStatus.OK)
+	DespesaDetalhadoResponse getDespesaAtravesId(@PathVariable UUID idPessa, @PathVariable UUID idDespesa);
+	
+	
 }
