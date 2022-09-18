@@ -2,13 +2,13 @@ package br.com.exactaworks.gestaodespesas.despesa.domain;
 
 public enum TipoDespesa {
 	ALIMENTACAO,
-	ASSINATURAS,
+	ASSINATURA,
 	CUIDADOSPESSOAIS,
 	COMPRAS,
 	DIVIDAS,
-	EMPRESTIMOS,
+	EMPRESTIMO,
 	EDUCACAO,
-	INVESTIMENTOS,
+	INVESTIMENTO,
 	LAZER,
 	MERCADO,
 	SAUDE,
