@@ -8,4 +8,5 @@ public interface DespesaRepository {
 	Despesa salvaDespesa(Despesa despesa);
 	List<Despesa> buscaDespesaDaPessoaComId(UUID idPessoa);
 	Despesa buscaDespesaPeloId(UUID idDespesa);
+	void deletaDespesaId(Despesa despesa);
 }

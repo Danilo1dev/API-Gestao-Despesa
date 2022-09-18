@@ -53,6 +53,9 @@ public class DespesaApplicationService implements DespesaService {
 	@Override
 	public void deletaDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa) {
 		log.info("[inicia] DespesaApplicationService - deletaDespesaDaPessoaComId");
+		pessoaService.buscaPessoaAtravesID(idPessoa);
+		Despesa despesa = despesaRepository.buscaDespesaPeloId(idDespesa);
+		despesaRepository.deletaDespesaId(despesa);
 		log.info("[finaliza] DespesaApplicationService - deletaDespesaDaPessoaComId");
 	}
 }

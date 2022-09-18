@@ -28,7 +28,7 @@ public class DespesaInfraRepository implements DespesaRepository {
 	public List<Despesa> buscaDespesaDaPessoaComId(UUID idPessoa) {
 		log.info("[inicia] DespesaInfraRepository - buscaDespesaDaPessoaComId");
 		var despesa = despesaSpringDataJPARepository.findByIdPessoaCadastrada(idPessoa);
-		log.info("[inicia] DespesaInfraRepository - buscaDespesaDaPessoaComId");
+		log.info("[finaliza] DespesaInfraRepository - buscaDespesaDaPessoaComId");
 		return despesa;
 	}
 
@@ -37,7 +37,13 @@ public class DespesaInfraRepository implements DespesaRepository {
 		log.info("[inicia] DespesaInfraRepository - buscaDespesaPeloId");
 		var despesa = despesaSpringDataJPARepository.findById(idDespesa)
 				.orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Despesa não encontrada pelo idDespesa " + idDespesa));
-		log.info("[inicia] DespesaInfraRepository - buscaDespesaPeloId");
+		log.info("[finaliza] DespesaInfraRepository - buscaDespesaPeloId");
 		return despesa;
+	}
+
+	@Override
+	public void deletaDespesaId(Despesa despesa) {
+		log.info("[inicia] DespesaInfraRepository - deletaDespesaId");
+		log.info("[finaliza] DespesaInfraRepository - deletaDespesaId");
 	}
 }
