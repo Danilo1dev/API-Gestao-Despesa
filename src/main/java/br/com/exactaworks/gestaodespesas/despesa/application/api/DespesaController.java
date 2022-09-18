@@ -27,8 +27,9 @@ public class DespesaController implements DespesaAPI {
 	public List<DespesaDaPessoaListResponse> getDepesaDaPessoaComId(UUID idPessoa) {
 		log.info("[inicia] DespesaController - getDepesaDaPessoaComId");
 		log.info("[idPessoa]{}",idPessoa);
+		List<DespesaDaPessoaListResponse>DespesaDaPessoa = despesaService.buscaDespesaDaPessoaComId(idPessoa);
 		log.info("[finaliza] DespesaController - getDepesaDaPessoaComId");
-		return null;
+		return DespesaDaPessoa;
 	}
 }
 

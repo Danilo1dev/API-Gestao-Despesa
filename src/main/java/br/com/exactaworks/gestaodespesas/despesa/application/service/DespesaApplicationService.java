@@ -1,8 +1,11 @@
 package br.com.exactaworks.gestaodespesas.despesa.application.service;
 
+import java.util.List;
 import java.util.UUID;
 import javax.validation.Valid;
 import org.springframework.stereotype.Service;
+
+import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaDaPessoaListResponse;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaRequest;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaResponse;
 import br.com.exactaworks.gestaodespesas.despesa.application.repository.DespesaRepository;
@@ -25,5 +28,12 @@ public class DespesaApplicationService implements DespesaService {
 		Despesa despesa = despesaRepository.salvaDespesa(new Despesa(idPessoa, despesaRequest));
 		log.info("[finaliza] DespesaApplicationService - criaDespesa");
 		return new DespesaResponse(despesa.getIdDespesa());
+	}
+
+	@Override
+	public List<DespesaDaPessoaListResponse> buscaDespesaDaPessoaComId(UUID idPessoa) {
+		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
+		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
+		return null;
 	}
 }
