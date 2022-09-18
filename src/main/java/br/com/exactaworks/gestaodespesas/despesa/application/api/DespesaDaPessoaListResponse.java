@@ -1,7 +1,10 @@
 package br.com.exactaworks.gestaodespesas.despesa.application.api;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
+
+import br.com.exactaworks.gestaodespesas.despesa.domain.Despesa;
 import br.com.exactaworks.gestaodespesas.despesa.domain.TipoDespesa;
 import lombok.Value;
 
@@ -12,4 +15,8 @@ public class DespesaDaPessoaListResponse {
 	private Double valorDespesa;
 	private TipoDespesa tipoDespesa;
 	private LocalDate dataDaDespesa;
+	
+	public static List<DespesaDaPessoaListResponse> converte(List<Despesa> despesaDaPessoa) {
+		return null;
+	}
 }
