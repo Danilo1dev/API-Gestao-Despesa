@@ -44,6 +44,7 @@ public class DespesaInfraRepository implements DespesaRepository {
 	@Override
 	public void deletaDespesaId(Despesa despesa) {
 		log.info("[inicia] DespesaInfraRepository - deletaDespesaId");
+		despesaSpringDataJPARepository.delete(despesa);
 		log.info("[finaliza] DespesaInfraRepository - deletaDespesaId");
 	}
 }
