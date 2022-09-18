@@ -45,6 +45,7 @@ public class DespesaController implements DespesaAPI {
 	public void deletaDespasDaPessoaComId(UUID idPessoa, UUID idDespesa) {
 		log.info("[inicia] DespesaController - deletaDespasDaPessoaComId");
 		log.info("[idPessoa]{} - [idDespesa] {}",idPessoa, idDespesa);
+		despesaService.deletaDespesaDaPessoaComId(idPessoa, idDespesa);
 		log.info("[finaliza] DespesaController - deletaDespasDaPessoaComId");
 	}
 }

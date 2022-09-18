@@ -13,4 +13,5 @@ public interface DespesaService {
 	DespesaResponse criaDespesa(UUID idPessoa, @Valid DespesaRequest despesaRequest);
 	List<DespesaDaPessoaListResponse> buscaDespesaDaPessoaComId(UUID idPessoa);
 	DespesaDetalhadoResponse buscaDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa);
+	void deletaDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa);
 }

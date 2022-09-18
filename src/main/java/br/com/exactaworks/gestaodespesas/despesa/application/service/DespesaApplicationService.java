@@ -37,7 +37,7 @@ public class DespesaApplicationService implements DespesaService {
 	public List<DespesaDaPessoaListResponse> buscaDespesaDaPessoaComId(UUID idPessoa) {
 		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
 		List<Despesa> despesaDaPessoa = despesaRepository.buscaDespesaDaPessoaComId(idPessoa);
-		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
+		log.info("[finaliza] DespesaApplicationService - buscaDespesaDaPessoaComId");
 		return DespesaDaPessoaListResponse.converte(despesaDaPessoa);
 	}
 
@@ -46,7 +46,13 @@ public class DespesaApplicationService implements DespesaService {
 		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
 		pessoaService.buscaPessoaAtravesID(idPessoa);
 		Despesa despesa = despesaRepository.buscaDespesaPeloId(idDespesa);
-		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
+		log.info("[finaliza] DespesaApplicationService - buscaDespesaDaPessoaComId");
 		return new DespesaDetalhadoResponse(despesa);
+	}
+
+	@Override
+	public void deletaDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa) {
+		log.info("[inicia] DespesaApplicationService - deletaDespesaDaPessoaComId");
+		log.info("[finaliza] DespesaApplicationService - deletaDespesaDaPessoaComId");
 	}
 }
