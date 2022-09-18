@@ -14,7 +14,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaAlteracaoRequest;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaRequest;
 import lombok.AccessLevel;
