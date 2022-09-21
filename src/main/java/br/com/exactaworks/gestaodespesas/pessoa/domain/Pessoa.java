@@ -1,7 +1,9 @@
 package br.com.exactaworks.gestaodespesas.pessoa.domain;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -9,11 +11,14 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import br.com.exactaworks.gestaodespesas.despesa.domain.Despesa;
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.PessoaAlteracaoRequest;
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.pessoaRequest;
 import lombok.AccessLevel;
@@ -32,6 +37,10 @@ public class Pessoa {
 	@NotBlank
 	@Column(unique = true)
 	private String nomePessoa;
+	
+	@OneToMany (mappedBy = "pessoa")
+	private List<Despesa> despesa;
+	
 	@NotBlank
 	@Size(max = 11)
 	@Column(unique = true)
