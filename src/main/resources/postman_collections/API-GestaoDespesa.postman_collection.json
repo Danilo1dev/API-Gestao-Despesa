@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "68c38bf7-690f-4ecc-8939-fbd803baa043",
+		"name": "API-GestaoDespesa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17890493"
+	},
+	"item": [
+		{
+			"name": "Pessoa",
+			"item": [
+				{
+					"name": "pessoaPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomePessoa\":\"Amanda Juliana Nair da Cunha\",\r\n    \"cpf\":\"37200994588\",\r\n    \"idade\":\"21\",\r\n    \"sexo\": \"FEMININO\",\r\n    \"telefone\": \"69991191784\",\r\n    \"email\": \"amanda-dacunha74@acaocontabilsjc.com.br\",\r\n    \"renda\": \"30000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/gestao-despesa/api/v1/pessoa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alteraPessoaPatch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomePessoa\":\"Danilo Silva Ferreira\",\r\n    \"cpf\":\"03063118524\",\r\n    \"idade\":\"33\",\r\n    \"sexo\": \"MASCULINO\",\r\n    \"telefone\": \"73981978258\",\r\n    \"email\": \"danilofoxlog@gmail.com\",\r\n    \"renda\": \"1000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/gestao-despesa/api/v1/pessoa/8696f956-4f4b-4e76-b500-68209e14b034",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"8696f956-4f4b-4e76-b500-68209e14b034"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listaTodasPessoas GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/gestao-despesa/api/v1/pessoa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscaPessoaAtravesId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/gestao-despesa/api/v1/pessoa/fe268e16-8d88-4540-ae2a-a98d8cf6cdde",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"fe268e16-8d88-4540-ae2a-a98d8cf6cdde"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletaPessoaAtravesId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/gestao-despesa/api/v1/pessoa/e0f61045-8795-431a-97b5-4096509ef60d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"e0f61045-8795-431a-97b5-4096509ef60d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Despesa",
+			"item": [
+				{
+					"name": "despesaPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\":\"compra da feira do mes\",\r\n    \"valorDespesa\":\"600\",\r\n    \"tipoDespesa\":\"MERCADO\",\r\n    \"dataDaDespesa\": \"2022-07-18\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/gestao-despesa/api/v1/pessoa/8696f956-4f4b-4e76-b500-68209e14b034/despesa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"8696f956-4f4b-4e76-b500-68209e14b034",
+								"despesa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alteraPessoaPatch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\":\"Assinatura Netflix\",\r\n    \"valorDespesa\":\"250\",\r\n    \"tipoDespesa\":\"ASSINATURA\",\r\n    \"dataDaDespesa\": \"2022-07-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/gestao-despesa/api/v1/pessoa/c44cec94-19ae-45ca-a651-e0ead1be1c9b/despesa/501a2f76-7cc5-4e23-8be5-19b2725caacb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"c44cec94-19ae-45ca-a651-e0ead1be1c9b",
+								"despesa",
+								"501a2f76-7cc5-4e23-8be5-19b2725caacb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listaTodasDespesasGET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/gestao-despesa/api/v1/pessoa/2c40bd8d-1134-4f3c-90a4-0eb7bdd9161a/despesa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"2c40bd8d-1134-4f3c-90a4-0eb7bdd9161a",
+								"despesa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscaDespesaAtravesId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/gestao-despesa/api/v1/pessoa/8696f956-4f4b-4e76-b500-68209e14b034/despesa/9dcf6358-bfc6-45c6-8615-eec8b154779a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"8696f956-4f4b-4e76-b500-68209e14b034",
+								"despesa",
+								"9dcf6358-bfc6-45c6-8615-eec8b154779a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletaDespesaAtravesId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/gestao-despesa/api/v1/pessoa/e25a784e-635e-46b5-a202-faa21e26856f/despesa/f0c3b055-bcde-498a-b232-72060579f282",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"e25a784e-635e-46b5-a202-faa21e26856f",
+								"despesa",
+								"f0c3b055-bcde-498a-b232-72060579f282"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TestHomeGestaoDespesa/API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/gestao-despesa/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gestao-despesa",
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "3b4ab35b-b056-4851-9e1f-be90fffea295",
+		"name": "API-GestaoDespesa - Prod",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17890493"
+	},
+	"item": [
+		{
+			"name": "Pessoa",
+			"item": [
+				{
+					"name": "pessoaPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomePessoa\":\"Kevin Elias Duarte\",\r\n    \"cpf\":\"58162237550\",\r\n    \"idade\":\"20\",\r\n    \"sexo\": \"MASCULINO\",\r\n    \"telefone\": \"48994858180\",\r\n    \"email\": \"kevin.elias.duarte@sociedadeweb.com.br\",\r\n    \"renda\": \"5000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-gestao-despesa.herokuapp.com/gestao-despesa/api/v1/pessoa",
+							"protocol": "https",
+							"host": [
+								"api-gestao-despesa",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alteraPessoaPatch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomePessoa\":\"Kevin Elias Duarte\",\r\n    \"cpf\":\"58162237550\",\r\n    \"idade\":\"20\",\r\n    \"sexo\": \"MASCULINO\",\r\n    \"telefone\": \"48994858180\",\r\n    \"email\": \"kevin.elias.duarte@sociedadeweb.com.br\",\r\n    \"renda\": \"5000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-gestao-despesa.herokuapp.com/gestao-despesa/api/v1/pessoa/a18c8d2b-17d7-42fb-9e7b-6d3d1badeea0",
+							"protocol": "https",
+							"host": [
+								"api-gestao-despesa",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"a18c8d2b-17d7-42fb-9e7b-6d3d1badeea0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listaTodasPessoas GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-gestao-despesa.herokuapp.com/gestao-despesa/api/v1/pessoa",
+							"protocol": "https",
+							"host": [
+								"api-gestao-despesa",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscaPessoaAtravesId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-gestao-despesa.herokuapp.com/gestao-despesa/api/v1/pessoa/a18c8d2b-17d7-42fb-9e7b-6d3d1badeea0",
+							"protocol": "https",
+							"host": [
+								"api-gestao-despesa",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"a18c8d2b-17d7-42fb-9e7b-6d3d1badeea0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletaPessoaAtravesId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-gestao-despesa.herokuapp.com/gestao-despesa/api/v1/pessoa/72877da5-02d7-4572-896f-3556fb282b17",
+							"protocol": "https",
+							"host": [
+								"api-gestao-despesa",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"72877da5-02d7-4572-896f-3556fb282b17"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Despesa",
+			"item": [
+				{
+					"name": "despesaPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\":\"compra lanche\",\r\n    \"valorDespesa\":\"100\",\r\n    \"tipoDespesa\":\"ALIMENTACAO\",\r\n    \"dataDaDespesa\": \"2022-10-18\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-gestao-despesa.herokuapp.com/gestao-despesa/api/v1/pessoa/073de1f7-f9aa-43db-9ee8-b5a55ba00f3a/despesa",
+							"protocol": "https",
+							"host": [
+								"api-gestao-despesa",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"073de1f7-f9aa-43db-9ee8-b5a55ba00f3a",
+								"despesa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alteraPessoaPatch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\":\"Assinatura Netflix\",\r\n    \"valorDespesa\":\"250\",\r\n    \"tipoDespesa\":\"ASSINATURA\",\r\n    \"dataDaDespesa\": \"2022-07-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-gestao-despesa.herokuapp.com/gestao-despesa/api/v1/pessoa/073de1f7-f9aa-43db-9ee8-b5a55ba00f3a/despesa/6de60c4a-3546-458c-a4c5-6584666da7b8",
+							"protocol": "https",
+							"host": [
+								"api-gestao-despesa",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"073de1f7-f9aa-43db-9ee8-b5a55ba00f3a",
+								"despesa",
+								"6de60c4a-3546-458c-a4c5-6584666da7b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listaTodasDespesasGET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-gestao-despesa.herokuapp.com/gestao-despesa/api/v1/pessoa/073de1f7-f9aa-43db-9ee8-b5a55ba00f3a/despesa",
+							"protocol": "https",
+							"host": [
+								"api-gestao-despesa",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"073de1f7-f9aa-43db-9ee8-b5a55ba00f3a",
+								"despesa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscaDespesaAtravesId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-gestao-despesa.herokuapp.com/gestao-despesa/api/v1/pessoa/073de1f7-f9aa-43db-9ee8-b5a55ba00f3a/despesa/6de60c4a-3546-458c-a4c5-6584666da7b8",
+							"protocol": "https",
+							"host": [
+								"api-gestao-despesa",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"073de1f7-f9aa-43db-9ee8-b5a55ba00f3a",
+								"despesa",
+								"6de60c4a-3546-458c-a4c5-6584666da7b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletaDespesaAtravesId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-gestao-despesa.herokuapp.com/gestao-despesa/api/v1/pessoa/e25a784e-635e-46b5-a202-faa21e26856f/despesa/f0c3b055-bcde-498a-b232-72060579f282",
+							"protocol": "https",
+							"host": [
+								"api-gestao-despesa",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"gestao-despesa",
+								"api",
+								"v1",
+								"pessoa",
+								"e25a784e-635e-46b5-a202-faa21e26856f",
+								"despesa",
+								"f0c3b055-bcde-498a-b232-72060579f282"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TestHomeGestaoDespesa/API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-gestao-despesa.herokuapp.com/gestao-despesa/api",
+					"protocol": "https",
+					"host": [
+						"api-gestao-despesa",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"gestao-despesa",
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
