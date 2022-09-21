@@ -21,12 +21,16 @@ import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaAlteraca
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaRequest;
 import br.com.exactaworks.gestaodespesas.pessoa.domain.Pessoa;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 @Entity
+@Builder
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Despesa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -35,6 +39,7 @@ public class Despesa {
 	@NotNull
 	@Column(columnDefinition = "uuid", name = "idPessoaCadastrada", nullable = false)
 	private UUID idPessoaCadastrada;
+	
 	@ManyToOne
 	private Pessoa pessoa;
 	

@@ -37,6 +37,7 @@ public class Pessoa {
 	@NotBlank
 	@Column(unique = true)
 	private String nomePessoa;
+	
 	@OneToMany (mappedBy = "pessoa")
 	private List<Despesa> despesa;
 	

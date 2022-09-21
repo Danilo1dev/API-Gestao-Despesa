@@ -11,6 +11,7 @@ import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaRequest;
 import br.com.exactaworks.gestaodespesas.despesa.application.api.DespesaResponse;
 import br.com.exactaworks.gestaodespesas.despesa.application.repository.DespesaRepository;
 import br.com.exactaworks.gestaodespesas.despesa.domain.Despesa;
+import br.com.exactaworks.gestaodespesas.pessoa.application.api.PessoaDetalhadoResponse;
 import br.com.exactaworks.gestaodespesas.pessoa.application.service.PessoaService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -42,10 +43,10 @@ public class DespesaApplicationService implements DespesaService {
 	@Override
 	public DespesaDetalhadoResponse buscaDespesaDaPessoaComId(UUID idPessoa, UUID idDespesa) {
 		log.info("[inicia] DespesaApplicationService - buscaDespesaDaPessoaComId");
-		pessoaService.buscaPessoaAtravesID(idPessoa);
+		PessoaDetalhadoResponse pessoaAtravesID = pessoaService.buscaPessoaAtravesID(idPessoa);
 		Despesa despesa = despesaRepository.buscaDespesaPeloId(idDespesa);
 		log.info("[finaliza] DespesaApplicationService - buscaDespesaDaPessoaComId");
-		return new DespesaDetalhadoResponse(despesa);
+		return new DespesaDetalhadoResponse(despesa,pessoaAtravesID);
 	}
 
 	@Override

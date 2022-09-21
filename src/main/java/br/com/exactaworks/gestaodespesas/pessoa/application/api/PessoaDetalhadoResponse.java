@@ -2,9 +2,14 @@ package br.com.exactaworks.gestaodespesas.pessoa.application.api;
 
 import br.com.exactaworks.gestaodespesas.pessoa.domain.Pessoa;
 import br.com.exactaworks.gestaodespesas.pessoa.domain.Sexo;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Value;
 
 @Value
+@Builder
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class PessoaDetalhadoResponse {
 	private String nomePessoa;
 	private String cpf;
