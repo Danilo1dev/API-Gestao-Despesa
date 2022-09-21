@@ -1,6 +1,6 @@
-# _Gerenciador de Gastos_
+# _Gerenciador de Despesas_
 
-Desenvolvendo um sistema de gerenciamento de gastos em API REST com Spring Boot.
+Desenvolvendo um sistema de gerenciamento de despesas em API REST com Spring Boot.
 
 Topicos envolvidos nessa implementação: ⬇️
 
