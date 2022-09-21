@@ -1,4 +1,4 @@
-# _Gerenciador de gastos_
+# _Gerenciador de Gastos_
 
 Desenvolvendo um sistema de gerenciamento de gastos em API REST com Spring Boot.
 
