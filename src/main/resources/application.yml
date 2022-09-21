@@ -13,9 +13,9 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:postgresql://ec2-52-207-90-231.compute-1.amazonaws.com/d62lec0gnnq85a
-    username: dxmmxaimqpwrnr
-    password: 8294438a0f226e6fd3297067a943afe98f686de42529ee4f6d64aa07642bd083
+    url: jdbc:postgresql://ec2-35-170-146-54.compute-1.amazonaws.com/da0324eb1t9ud8
+    username: ljicypnkuwomaj
+    password: 94cc7ecb4f68f4d77039038e896cb39b2480afca0633bb7fbfa4414112fc2e7c
     driverClassName: org.postgresql.Driver
   sql:
     init:
