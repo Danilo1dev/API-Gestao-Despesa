@@ -6,7 +6,7 @@ Topicos envolvidos nessa implementação: ⬇️
 
 - Setup inicial de projeto com o Spring Boot Initializer.
 - Criação de modelo de dados para o mapeamento de entidades em bancos de dados.
-- Desenvolvimento de operações de gerenciamento de Pessoa e Gasto (CRUD - Cadastro, leitura, atualização e remoção de pessoas e gasto do sistema).
+- Desenvolvimento de operações de gerenciamento de Pessoa e Despesas (CRUD - Cadastro, leitura, atualização e remoção de pessoas e despesas do sistema).
 - Implantação do sistema na nuvem através do Heroku.
 
 ## Implementação
