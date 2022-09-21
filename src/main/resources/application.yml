@@ -7,13 +7,16 @@ springdoc:
     path: /public/swagger
     
 spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
   datasource:
-    url: jdbc:h2:mem:demodb
-    username: sa
-    password:
-    driverClassName: org.h2.Driver
-    
-  h2:
-    console:
-      enabled: true
-      path: /h2-console 
+    url: jdbc:postgresql://ec2-52-207-90-231.compute-1.amazonaws.com/d62lec0gnnq85a
+    username: dxmmxaimqpwrnr
+    password: 8294438a0f226e6fd3297067a943afe98f686de42529ee4f6d64aa07642bd083
+    driverClassName: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
