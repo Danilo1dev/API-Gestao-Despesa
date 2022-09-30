@@ -21,11 +21,6 @@ Topicos envolvidos nessa implementação: ⬇️
 
 -Heroku;
 
-## Desafio
-Segue o enunciado original:
-
-[Exactaworks](https://drive.google.com/file/d/1IEGTgkVQPyV_WzOIngDrkcG9sw1Vfzt0/view?usp=sharing)
-
 ## Develop
 Contem todo projeto implementado.
 
