@@ -4,9 +4,11 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import br.com.exactaworks.gestaodespesas.pessoa.domain.Sexo;
+import lombok.Builder;
 import lombok.Value;
 
 @Value
+@Builder
 public class pessoaRequest {
 
 	@NotBlank

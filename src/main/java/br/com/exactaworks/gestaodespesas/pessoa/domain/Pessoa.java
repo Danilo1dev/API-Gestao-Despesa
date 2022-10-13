@@ -21,13 +21,13 @@ import javax.validation.constraints.Size;
 import br.com.exactaworks.gestaodespesas.despesa.domain.Despesa;
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.PessoaAlteracaoRequest;
 import br.com.exactaworks.gestaodespesas.pessoa.application.api.pessoaRequest;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 @Entity
+@Builder
+@AllArgsConstructor
 public class Pessoa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
